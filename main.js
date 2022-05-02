@@ -119,3 +119,33 @@ console.log(k == j)
 if (0) {
   console.log(123)
 }
+
+
+//함수 복습
+
+function sum() {
+  console.log(arguments)
+    return arguments[0] + arguments[1]
+  }
+
+console.log(sum(7, 3))
+
+
+
+//화살표 함수
+const double = function (x, y) {
+  return x * 2
+}
+console.log('double: ', double(7))
+
+const doubleArrow = (x, y) => x * 2
+
+console.log('doubleArrow', doubleArrow(7))
+
+const ddoubleArrow = x => undefined
+
+console.log('ddoubleArrow', ddoubleArrow(7))
+
+const Arrow = x => ({
+  name: 'Heropy'
+})

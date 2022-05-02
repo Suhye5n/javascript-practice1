@@ -149,3 +149,21 @@ console.log('ddoubleArrow', ddoubleArrow(7))
 const Arrow = x => ({
   name: 'Heropy'
 })
+
+
+//즉시실행함수
+//IIFE
+
+const ab = 7
+function abc() {
+  console.log(ab * 2)
+}
+abc();
+
+(function () {
+  console.log(ab * 2)
+})();
+
+(function () {
+  console.log(ab * 2)
+}())

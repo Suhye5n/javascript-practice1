@@ -167,3 +167,40 @@ abc();
 (function () {
   console.log(ab * 2)
 }())
+
+
+//호이스팅
+//함수 선언부가 유효범위 최상단으로 끌어올려지는 현상
+
+const abcd = 7
+
+doublefunction()
+
+function doublefunction() {
+  console.log(abcd * 2)
+}
+
+
+//타이머함수
+
+const timer = setInterval(() => {
+  console.log('Heropy!')
+}, 3000)
+
+const h1El = document.querySelector('h1')
+h1El.addEventListener('click', () => {
+  clearInterval(timer)
+})
+
+
+//콜백
+//함수의 인수로 사용되는 함수
+function timeout(cb) {
+  setTimeout(() => {
+    console.log('Heropy!')
+    cb()
+  }, 3000)
+}
+timeout(() => {
+  console.log('Done!')
+})

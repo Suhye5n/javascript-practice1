@@ -208,18 +208,74 @@ timeout(() => {
 
 //생성자 함수
 
-function User(first, last) {
-  this.firstName = first
-  this.lastName = last
-}
-User.prototype.getFullName = function () {
-  return `${this.firstName} ${this.lastName}`
+// function User(first, last) {
+//   this.firstName = first
+//   this.lastName = last
+// }
+// User.prototype.getFullName = function () {
+//   return `${this.firstName} ${this.lastName}`
+// }
+
+class User {
+  constructor(first, last) {
+    this.firstName = first
+    this.lastName = last
+  }
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
 }
 
 const heropy = new User('Heropy', 'Park')
 const amy = new User('Amy', 'Clarke')
 const neo = new User('Neo', 'Smith')
 
-console.log(heropy.getFullName())
+console.log(heropy)
 console.log(amy.getFullName())
 console.log(neo.getFullName())
+
+const suhyeon = {
+  name: 'suhyeon',
+  normal: function () {
+    console.log(this.name)
+  }
+}
+suhyeon.normal()
+
+const happy = {
+  name: 'happy',
+  normal: suhyeon.normal,
+}
+happy.normal()
+
+
+function People(name) {
+  this.name = name
+}
+
+People.prototype.normal = function () {
+  console.log(this.name)
+}
+
+const hooloo = new People('hooloo')
+
+hooloo.normal()
+
+
+const timer2 = {
+  name: 'suhyeon!!',
+  timeout: function () {
+    setTimeout (() => {
+      console.log(this.name)
+    }, 2000)
+  }
+}
+timer2.timeout()
+
+
+const soo = {
+  name: 'soo',
+  normal: function () {
+    console.log(this.name)
+  }
+}

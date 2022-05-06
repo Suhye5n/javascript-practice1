@@ -311,3 +311,67 @@ const daughtersCar = new Car('포르쉐', 4, false)
 
 console.log(myCar)
 console.log(daughtersCar)
+
+
+const str = '0123'
+
+console.log('01 23'.length)
+
+
+const strin = "Hello world!"
+console.log(strin.indexOf("Heropy") !== -1)
+
+console.log(strin.slice(6, 11))
+
+console.log(strin.replace(' world', ''))
+
+
+const word = 'thesecon@gmail.com'
+
+console.log(word.match(/.+(?=@)/)[0])
+
+const wordmaster = '    Hello world   '
+console.log(wordmaster.trim())
+
+
+const pi = 3.14159265358979
+console.log(pi)
+
+const string = pi.toFixed(2)
+console.log(str)
+console.log(typeof str)
+
+const integer = parseInt(str)
+const float = parseFloat(str)
+console.log(integer)
+console.log(float)
+console.log(typeof integer, typeof float)
+
+const numbers = [1, 2, 3, 4]
+const fruits = ['Apple', 'Banana', 'Cherry']
+
+console.log(numbers[1])
+console.log(fruits[2])
+
+
+//.length
+
+console.log(numbers.length)
+console.log(fruits.length)
+console.log([1, 2].length)
+
+// .concat()
+
+console.log(numbers.concat(fruits))
+console.log(numbers)
+console.log(fruits)
+
+fruits.forEach(function (element, index, array) {
+  console.log(element, index, array)
+})
+
+//.map()
+
+const aaa = fruits.forEach(function (fruit, index) {
+  console.log(`${fruit}`)
+})
